@@ -21,3 +21,4 @@ app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
 
 import postRoutes from "./routes/posts.js";
 app.use("/posts", postRoutes);
+

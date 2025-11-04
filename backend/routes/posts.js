@@ -14,16 +14,22 @@ router.get("/", async (req, res) => {
 });
 
 // criar post
+// criar post
 router.post("/", async (req, res) => {
+  console.log("Recebido POST:", req.body); // <- adicione isto
   try {
-    const { title, text, user } = req.body;
-    if (!title || !text || !user) return res.status(400).json({ error: "Campos obrigatórios!" });
-    const post = new Post({ title, text, user });
-    await post.save();
-    res.status(201).json(post);
+    const newPost = new Post({
+      username: req.body.username,
+      title: req.body.title,
+      posttext: req.body.posttext,
+      comments: []
+    });
+    await newPost.save();
+    res.status(201).json(newPost);
   } catch (err) {
-    res.status(500).json({ error: "Erro ao criar post" });
+    res.status(500).json({ error: err.message });
   }
 });
+;
 
 export default router;

@@ -1,12 +1,11 @@
 import React from "react";
-import {Formik, Form, Field, ErrorMessage} from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import api from "../services/api"
+import api from "../services/api";
 import "../App.css";
 
-
-function CreatePost(){
-     const initialValues = {
+function CreatePost() {
+  const initialValues = {
     title: "",
     posttext: "",
     username: "",
@@ -18,23 +17,27 @@ function CreatePost(){
     username: Yup.string().min(3).max(15).required("Você deve se identificar!"),
   });
 
-    const onSubmit = (data) =>{
-      api.post("/posts", data).then((response) =>{
-        console.log(data);
-        console.log("Post adicionado com sucesso!!!")
-      })
+  const onSubmit = async (data, { resetForm }) => {
+    try {
+      console.log("Enviando post...", data); // log no console do navegador
+      const response = await api.post("/posts", data);
+      console.log("Post adicionado com sucesso:", response.data);
+      resetForm(); // limpa o formulário após o envio
+    } catch (err) {
+      console.error("Erro ao enviar post:", err);
+      alert("Não foi possível criar o post. Veja o console.");
     }
+  };
 
-    return (
-    
-        <div className="createPostPage">
+  return (
+    <div className="createPostPage">
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
         <Form className="formContainer">
-          <label>Título: </label>
+          <label>Título:</label>
           <ErrorMessage name="title" component="span" />
           <Field
             autoComplete="off"
@@ -42,7 +45,8 @@ function CreatePost(){
             name="title"
             placeholder="(Ex. Title...)"
           />
-          <label>Post: </label>
+
+          <label>Post:</label>
           <ErrorMessage name="posttext" component="span" />
           <Field
             autoComplete="off"
@@ -50,7 +54,8 @@ function CreatePost(){
             name="posttext"
             placeholder="(Ex. Post...)"
           />
-          <label>Usuário: </label>
+
+          <label>Usuário:</label>
           <ErrorMessage name="username" component="span" />
           <Field
             autoComplete="off"
@@ -63,7 +68,7 @@ function CreatePost(){
         </Form>
       </Formik>
     </div>
-
-    )
+  );
 }
+
 export default CreatePost;
