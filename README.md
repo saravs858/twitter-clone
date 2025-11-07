@@ -24,21 +24,21 @@ O projeto foi desenvolvido com **React** no frontend e **Node.js/Express** no ba
 
 ## 📂 Estrutura do Projeto
 
-twitter-clone/
-├── backend/
-│ ├── routes/ # Rotas da API
-│ ├── controllers/ # Lógica das rotas
-│ ├── app.js # Configuração do servidor
-│ └── package.json
-├── frontend/
-│ ├── src/
-│ │ ├── Components/ # Componentes reutilizáveis (PostCard, Navbar)
-│ │ ├── Pages/ # Páginas (Home, Post)
-│ │ ├── App.jsx # Roteamento principal
-│ │ └── App.css # Estilos globais
-│ ├── package.json
-├── package.json
-└── README.md
+twitter-clone/ <br>
+├── backend/ <br>
+│ ├── routes/ # Rotas da API <br>
+│ ├── controllers/ # Lógica das rotas <br>
+│ ├── app.js # Configuração do servidor <br>
+│ └── package.json <br>
+├── frontend/ <br>
+│ ├── src/ <br>
+│ │ ├── Components/ # Componentes reutilizáveis (PostCard, Navbar) <br>
+│ │ ├── Pages/ # Páginas (Home, Post) <br>
+│ │ ├── App.jsx # Roteamento principal <br>
+│ │ └── App.css # Estilos globais <br>
+│ ├── package.json <br>
+├── package.json <br>
+└── README.md <br>
 
 ---
 
@@ -91,11 +91,14 @@ npm run dev
 
 O servidor frontend iniciará em: http://localhost:5173 (ou a porta que o Vite usar)
 
-📌 Observações
+---
 
-Certifique-se de que o backend esteja rodando antes de acessar o frontend
-O frontend consome os endpoints do backend para listar e criar posts
-O CSS é moderno, com sombras, transições e cores inspiradas no Twitter
+## 📌 Observações 
+Certifique-se de que o backend esteja rodando antes de acessar o frontend. <br>
+O frontend consome os endpoints do backend para listar e criar posts. <br>
+O CSS é moderno, com sombras, transições e cores inspiradas no Twitter. <br>
 
-👨‍💻 Autor
+---
+
+## 👨‍💻 Autor 
 Sara Vieira Silva – Estudante de informática, programação e desenvolvimento web.
