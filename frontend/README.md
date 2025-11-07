@@ -71,31 +71,31 @@ Clone o projeto:
 ```bash
 git clone https://github.com/seu-usuario/twitter-clone.git
 cd twitter-clone
-
+```
 Backend
+
+```bash
 cd backend
 npm install
 npm run dev
-
+```
 
 O servidor backend iniciará em: http://localhost:3000
 
 Frontend
+```bash
 cd frontend
 npm install
 npm run dev
-
+```
 
 O servidor frontend iniciará em: http://localhost:5173 (ou a porta que o Vite usar)
 
 📌 Observações
 
 Certifique-se de que o backend esteja rodando antes de acessar o frontend
-
 O frontend consome os endpoints do backend para listar e criar posts
-
 O CSS é moderno, com sombras, transições e cores inspiradas no Twitter
 
 👨‍💻 Autor
-
-Sara Vieira Silva – Estudante de informática, apaixonada por programação e desenvolvimento web.
+Sara Vieira Silva – Estudante de informática, programação e desenvolvimento web.
