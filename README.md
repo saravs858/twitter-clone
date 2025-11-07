@@ -23,7 +23,7 @@ O projeto foi desenvolvido com **React** no frontend e **Node.js/Express** no ba
 ---
 
 ## 📂 Estrutura do Projeto
-
+```bash
 twitter-clone/ <br>
 ├── backend/ <br>
 │ ├── routes/ # Rotas da API <br>
@@ -39,7 +39,7 @@ twitter-clone/ <br>
 │ ├── package.json <br>
 ├── package.json <br>
 └── README.md <br>
-
+```
 ---
 
 ## ⚡ Funcionalidades
