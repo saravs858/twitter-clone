@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 import postRoutes from "./routes/posts.js";
 import commentRoutes from "./routes/Comments.js";
-import userRoutes from "./routes/users.js"; // 👈 nova importação
+import userRoutes from "./routes/users.js"; 
 
 const app = express();
 app.use(cors());
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.use("/posts", postRoutes);
 app.use("/api/comments", commentRoutes);
-app.use("/users", userRoutes); // 👈 adiciona aqui
+app.use("/users", userRoutes); 
 
 const PORT = 5000;
 app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
