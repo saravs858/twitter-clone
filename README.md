@@ -69,7 +69,7 @@ twitter-clone/ <br>
 Clone o projeto:
 
 ```bash
-git clone https://github.com/seu-usuario/twitter-clone.git
+git clone https://github.com/saravs858/twitter-clone.git
 cd twitter-clone
 ```
 Backend
